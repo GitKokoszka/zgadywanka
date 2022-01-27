@@ -1,5 +1,5 @@
 const Komponent = () => {
-  return <div>30 i 35</div>;
+  return <div>30 - 55</div>;
 };
 
 export default Komponent;

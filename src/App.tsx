@@ -1,16 +1,24 @@
-import Komponent from "./Komponent";
+import PlayerInfo from "./PlayerInfo";
 
-const sum = (a: number, b: number) => {
-  return a + b;
-};
+const profiles = [];
 
 const App = () => {
   return (
-    <div>
-      Poziomy:
-      {sum(20, 10)}
-      <Komponent />
-    </div>
+    <>
+      <div>Informacje o graczu:</div>
+      <PlayerInfo
+        playerName={"PotatoCanon"}
+        level={50}
+        favoriteChampion="Ashe"
+        playerRank="Silver III"
+      />
+      <PlayerInfo
+        playerName={"Ouji"}
+        level={30}
+        favoriteChampion="Teemo"
+        playerRank="Gold IV"
+      />
+    </>
   );
 };
 

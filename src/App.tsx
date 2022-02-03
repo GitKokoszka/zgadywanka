@@ -1,31 +1,23 @@
+import React, { useState } from "react";
 import PlayerInfo from "./PlayerInfo";
-import { PlayerProfile } from "./shared/types";
-
-const profiles: PlayerProfile[] = [
-  {
-    playerName: "PotatoCanon",
-    level: 50,
-    favoriteChampion: "Ashe",
-    playerRank: "Silver III",
-  },
-  {
-    playerName: "Ouji",
-    level: 69,
-    favoriteChampion: "Teemo",
-    playerRank: "Challenger",
-  },
-  {
-    playerName: "GameKornel",
-    level: 10,
-    favoriteChampion: "Master Yi",
-    playerRank: "Wood 3",
-  },
-];
+import { profiles } from "./shared/api";
 
 const App = () => {
+  const [count, setCount] = useState(0);
+  const [inputValue, setInputValue] = useState("");
+
   return (
     <>
-      <div>Informacje o graczu:</div>
+      <div style={{ fontSize: 32 }}>{count}</div>
+      <button
+        style={{ width: 100, height: 100 }}
+        onClick={() => setCount(count + 1)}
+      />
+      <input
+        value={inputValue}
+        onChange={(e) => setInputValue(e.currentTarget.value)}
+      ></input>
+      <div></div>
       {profiles.map((profile) => {
         return (
           <PlayerInfo

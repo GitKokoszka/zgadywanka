@@ -1,5 +1,4 @@
 import { PlayerProfile } from "./shared/types";
-import "./PlayerInfo.css";
 
 const PlayerInfo = ({
   playerName,
